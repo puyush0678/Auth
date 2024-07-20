@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Outlet, useLoaderData, useSubmit } from 'react-router-dom';
 
@@ -20,6 +19,8 @@ function RootLayout() {
     }
 
     const tokenDuration = getTokenDuration();
+    console.log(tokenDuration);
+
     setTimeout(() => {
       submit(null, { action: '/logout', method: 'post' });
     }, tokenDuration);

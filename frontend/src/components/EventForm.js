@@ -11,7 +11,6 @@ import { getAuthToken } from '../util/auth';
 import classes from './EventForm.module.css';
 
 function EventForm({ method, event }) {
-  console.log('new Event')
   const data = useActionData();
   const navigate = useNavigate();
   const navigation = useNavigation();
@@ -86,7 +85,6 @@ function EventForm({ method, event }) {
 export default EventForm;
 
 export async function action({ request, params }) {
-  console.log('new Event')
   const method = request.method;
   const data = await request.formData();
 
